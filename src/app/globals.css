@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #FAF4E8;
+  --color-cream-light: #FFFDF9;
+  --color-cream-dark: #F2E8D5;
+  --color-dark: #141010;
+  --color-dark-surface: #1E1818;
+  --color-terracotta: #933D3D;
+  --color-terracotta-dark: #7A2E2E;
+  --color-terracotta-light: #B45353;
+  --color-sky-paper: #D6E8EB;
+  --color-sky-dark: #BDD8DC;
+  --color-vintage-yellow: #FBE288;
+  --color-vintage-mint: #C5E4D8;
+  --color-vintage-coral: #EAA392;
+  --color-navy: #183153;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-display: var(--font-bebas), Impact, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF4E8;
+  --foreground: #141010;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* The Ken Style Retro 3D Extruded Title */
+.retro-3d-text {
+  font-family: var(--font-display);
+  color: #F89B29;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  -webkit-text-stroke: 2px #FFFFFF;
+  text-shadow: 
+    -2px -2px 0 #FFFFFF,
+     2px -2px 0 #FFFFFF,
+    -2px  2px 0 #FFFFFF,
+     2px  2px 0 #FFFFFF,
+     3px  3px 0 #183153,
+     4px  4px 0 #183153,
+     5px  5px 0 #183153,
+     6px  6px 0 #183153,
+     7px  7px 0 #183153,
+     8px  8px 0 #183153,
+     9px  9px 0 #183153,
+    10px 10px 0 #183153,
+    12px 12px 15px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 640px) {
+  .retro-3d-text {
+    -webkit-text-stroke: 1.5px #FFFFFF;
+    text-shadow: 
+      -1px -1px 0 #FFFFFF,
+       1px -1px 0 #FFFFFF,
+      -1px  1px 0 #FFFFFF,
+       1px  1px 0 #FFFFFF,
+       2px  2px 0 #183153,
+       3px  3px 0 #183153,
+       4px  4px 0 #183153,
+       5px  5px 0 #183153,
+       6px  6px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Vintage Paper Noise / Grain effect */
+.paper-texture {
+  background-image: radial-gradient(#141010 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  opacity: 0.03;
+}
+
+/* Perforated edge effect for retro tickets */
+.perforated-left {
+  position: relative;
+}
+.perforated-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  bottom: 0;
+  width: 16px;
+  background-image: radial-gradient(circle, transparent 6px, currentColor 6px);
+  background-size: 16px 20px;
+}
+
+/* Marquee Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF4E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #933D3D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A2E2E;
 }
