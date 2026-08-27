@@ -113,7 +113,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="text-[#FAF4E8] hover:text-[#933D3D] text-sm uppercase tracking-wider py-1"
             >
-              About ABC E-Cell
+              About SBC E-Cell
             </a>
             <div className="pt-2">
               <a

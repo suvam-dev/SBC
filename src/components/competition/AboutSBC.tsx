@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { competition } from "@/config/competition";
 import { Award, Compass, Globe, Sparkles } from "lucide-react";
 
-export function AboutAbc() {
+export function AboutSBC() {
   const { aboutEcell } = competition;
 
   return (

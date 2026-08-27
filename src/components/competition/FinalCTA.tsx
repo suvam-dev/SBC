@@ -33,9 +33,7 @@ export function FinalCTA() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <a
-              href="https://unstop.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/register"
               className="w-full sm:w-auto bg-[#FAF4E8] hover:bg-white text-[#8B2635] font-bold text-sm uppercase tracking-wider px-10 py-4 shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 group"
             >
               <span>Register Your Team</span>

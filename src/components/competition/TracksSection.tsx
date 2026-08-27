@@ -73,7 +73,7 @@ export function TracksSection() {
 
               <div className="pt-6 border-t border-[#D0BFAB]">
                 <a
-                  href={competition.registrationUrl}
+                  href={`/register?track=${track.id}`}
                   className="inline-flex items-center gap-2 font-mono text-xs uppercase font-bold tracking-wider text-[#8B2635] hover:text-[#141010] transition-colors"
                 >
                   <span>Register for {idx === 0 ? "Track A" : "Track B"}</span>

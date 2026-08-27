@@ -1,7 +1,7 @@
 export const competition = {
   name: "THE GREAT REWIRING",
-  subtitle: "ABC E-Cell's Case-Build Competition 2026",
-  organization: "ABC E-Cell",
+  subtitle: "SBC E-Cell's Case-Build Competition 2026",
+  organization: "SBC E-Cell",
   institution: "IIT Kharagpur",
   tagline: "India's Flagship Case & Product Strategy Competition",
   theme: "THE GREAT REWIRING: AGENTIC INDIA 2026",
@@ -13,9 +13,72 @@ export const competition = {
   prizePool: "₹20 lakh",
   prizePoolSubtext: "in cash prizes + VC incubation access & mentorship",
   eligibilityCallout: "Open to full-time college students across India, in any discipline.",
-  registrationUrl: "#register",
+  registrationUrl: "/register",
   brochureUrl: "#case",
   surveyUrl: "#survey",
+
+  opportunitySpaces: [
+    {
+      id: "whatsapp-filing",
+      title: "The Modern Desi Filing System",
+      category: "Personal Data & Identity",
+      tag: "VINTAGE POSTCARD #01",
+      badge: "CONSUMER WORKAROUND",
+      description: "A WhatsApp chat with yourself holding PAN card photos, insurance PDFs, car RC, and receipts you meant to remember. How do agents index, retrieve, and act on raw unstructured media without invasive apps?",
+      suggestedRails: ["Voice & Regional AI", "Payments & Escrow", "Identity & Locker"],
+      popular: true
+    },
+    {
+      id: "holiday-group",
+      title: "The Holiday Group & Tatkal Chaos",
+      category: "Group Decision & Travel",
+      tag: "VINTAGE POSTCARD #02",
+      badge: "COORDINATION FRICTION",
+      description: "Countless options, multiple opinions, weeks of indecision, and every good hotel booked. Can an autonomous agent gather group constraints, negotiate tradeoffs, and execute synchronous bookings on IRCTC/OTAs?",
+      suggestedRails: ["Voice & Language", "Payments & Authorisation", "Logistics & Fulfillment"],
+      popular: true
+    },
+    {
+      id: "mandi-logistics",
+      title: "The Mandi & Small Vendor Rail",
+      category: "Supply Chain & Commerce",
+      tag: "VINTAGE POSTCARD #03",
+      badge: "BHARAT COMMERCE",
+      description: "Small merchants, kiranas, and mandi suppliers communicating in regional dialects with zero formal digital ERPs. Translating spoken orders directly into logistics pickup, inventory dispatch, and UPI escrow.",
+      suggestedRails: ["Voice Interface", "Logistics & Physical Action", "UPI Escrow"],
+      popular: false
+    },
+    {
+      id: "vernacular-banking",
+      title: "Vernacular Voice Banking & Senior Concierge",
+      category: "Fintech & Accessibility",
+      tag: "VINTAGE POSTCARD #04",
+      badge: "INCLUSION & FINTECH",
+      description: "Millions of Tier 2-4 Indians struggle with complex banking apps, OTP scams, and KYC bureaucracy. Building an ultra-safe, voice-first agent that speaks 12+ Indian languages with fail-safe human verification.",
+      suggestedRails: ["Voice & Language", "Payments & Authorisation", "Security Rails"],
+      popular: true
+    },
+    {
+      id: "family-bookkeeping",
+      title: "Messy Family Bookkeeping & Tax Compliance",
+      category: "Finance & Taxation",
+      tag: "VINTAGE POSTCARD #05",
+      badge: "TAX & COMPLIANCE",
+      description: "Scattered paper receipts, mixed personal and business expenses, and year-end panic filing. Automatic invoice parsing, GST input credit reconciliation, and proactive deduction discovery.",
+      suggestedRails: ["Payments & Authorisation", "Document Intelligence", "Accounting Rails"],
+      popular: false
+    },
+    {
+      id: "custom-problem",
+      title: "Custom Problem: Propose Your Own Friction",
+      category: "Open Innovation",
+      tag: "OPEN THESIS #06",
+      badge: "OPEN INNOVATION",
+      description: "Notice a unique, infuriating friction in everyday Indian consumer or enterprise life? Frame your own thesis backed by primary user evidence and build the strategy/agent to rewire it.",
+      suggestedRails: ["Voice & Language", "Payments & Authorisation", "Logistics & Physical Action"],
+      popular: false
+    }
+  ],
 
   partnerTiers: {
     primary: { title: "In partnership with", name: "IIT KGP INNOVATION HUB" },
@@ -40,7 +103,7 @@ export const competition = {
         date: "15 AUGUST",
         text: "Registration is open to students in every discipline. Form your team, then answer a few questions about who you are and how you think.",
         linkText: "Register Now →",
-        linkUrl: "#register"
+        linkUrl: "/register"
       },
       {
         date: "06 AUGUST",
@@ -162,7 +225,7 @@ export const competition = {
     {
       place: "Grand Champion",
       amount: "₹10,00,000",
-      description: "Direct entry to ABC E-Cell Incubation Pool + ₹10 Lakhs Cash + Angel Investor Pitch Session"
+      description: "Direct entry to SBC E-Cell Incubation Pool + ₹10 Lakhs Cash + Angel Investor Pitch Session"
     },
     {
       place: "First Runner-Up",
@@ -208,9 +271,9 @@ export const competition = {
   },
 
   aboutEcell: {
-    heading: "ABC E-Cell, IIT Kharagpur",
+    heading: "SBC E-Cell, IIT Kharagpur",
     subheading: "Fostering the next generation of Indian business builders since 2006.",
-    description: "ABC Entrepreneurship Cell at IIT Kharagpur is recognized as one of India's premier student-run entrepreneurship bodies. Over the past two decades, our initiatives have catalyzed hundreds of venture-backed startups, empowered tens of thousands of student founders, and set the national benchmark for business case competitions.",
+    description: "SBC Entrepreneurship Cell at IIT Kharagpur is recognized as one of India's premier student-run entrepreneurship bodies. Over the past two decades, our initiatives have catalyzed hundreds of venture-backed startups, empowered tens of thousands of student founders, and set the national benchmark for business case competitions.",
     stats: [
       { number: "20+", label: "Years of Legacy" },
       { number: "150K+", label: "Student Network" },
@@ -234,7 +297,26 @@ export const competition = {
     },
     {
       q: "Is there any registration fee?",
-      a: "No. Participation in the ABC E-Cell IIT Kharagpur Case Competition 2026 is completely free."
+      a: "No. Participation in the SBC E-Cell IIT Kharagpur Case Competition 2026 is completely free."
+    }
+  ],
+
+  registrationFaqs: [
+    {
+      q: "Can I edit my team details or problem statement after registering?",
+      a: "Yes. Once registered, your Team Lead will receive an official Entry Confirmation Code. You can update your submission deck and thesis anytime before Phase III closes on 31 August."
+    },
+    {
+      q: "Can I participate as a solo individual founder?",
+      a: "Yes, teams can consist of 1, 2, or 3 students. Solo participants are evaluated on the exact same criteria."
+    },
+    {
+      q: "When will the dataset and API rails sandbox be provided?",
+      a: "Teams that complete Stage II registration will receive instant access to the curated Problem Dossiers, and shortlisted teams for Phase III will be granted direct API sandbox keys from Delhivery, Gnani.ai, and Pine Labs."
+    },
+    {
+      q: "What credentials do we need for student verification?",
+      a: "During the initial registration, simply submit your valid college roll number/email. Shortlisted teams reaching the Grand Finale at IIT Kharagpur will be asked to present their official Institute ID card."
     }
   ],
 
